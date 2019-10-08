@@ -1,5 +1,7 @@
 Download trained weights here: https://www.dropbox.com/s/2ytshnr5iavax2q/728467-2001.data-00000-of-00001?dl=0
 
+Put downloaded weights into ./checkpoints.
+
 # Improved Speech Enhancement with the Wave-U-Net
 
 The [Wave-U-Net applied to speech enhancement](http://arxiv.org/abs/1811.11307) [1], an adaptation of the [original implementation](https://github.com/f90/Wave-U-Net) for music source separation by [Stoller et al](https://arxiv.org/abs/1806.03185) [2].
