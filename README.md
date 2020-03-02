@@ -2,6 +2,15 @@ Download trained weights here: https://www.dropbox.com/s/2ytshnr5iavax2q/728467-
 
 Put downloaded weights into ./checkpoints.
 
+Update: I'd only meant for this code to be used by myself because I never thought any one would see thsi forked repo. But just in case someone else wants to use the code, here are my steps for inference, along with some reasons for why they are done this way.
+
+1. Main file to run is Test_Predictions_VCTK.py. [python Test_Predictions_VCTK.py]
+
+2. Place the file you want to denoise into the test_data/<any_name> folder. In my case it was test_data/p226_045/mix.wav.
+ Make sure your .wav file is renamed mix.wav, or you may simply change the syntax in the Test_Predictions_VCTK.py file. The  <any_name> folder can be named anything; it's not important as long as your .wav file is inside this folder. It is not    important because of the way it is coded inside Test_Predictions_VCTK.py, assuming you had not change the original code. If you are planning to denoise a lot of .wav files, just place each file into a unique folder in test_data and maybe change the syntax of the code from ..../mixed.wav to *.wav (just a suggestion).
+
+3. Run Test_Predictions_VCTK.py. The resulting cleaned .wav file will be found inside each <any_name> folder and titled as  mixed_speech.wav.
+
 # Improved Speech Enhancement with the Wave-U-Net
 
 The [Wave-U-Net applied to speech enhancement](http://arxiv.org/abs/1811.11307) [1], an adaptation of the [original implementation](https://github.com/f90/Wave-U-Net) for music source separation by [Stoller et al](https://arxiv.org/abs/1806.03185) [2].
